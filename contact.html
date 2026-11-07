@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AXIS — Client Portal &amp; Project Account Access</title>
+    <meta
+      name="description"
+      content="AXIS Architectural Glazing client portal login and studio project account registration."
+    />
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFDF_EbwtqqjIY_pFu9XllsJevfpVucaTYqhqwgW6tQA&s=10" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="standalone-contact">
+    <header class="axis-navbar">
+      <div class="container navbar-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-mark">◈</span>
+          <span>AXIS GLAZING</span>
+        </a>
+        <nav aria-label="Primary Architectural Navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html#page-home" class="nav-link">HOME</a></li>
+            <li><a href="index.html#page-arrivals" class="nav-link">NEW</a></li>
+            <li>
+              <a href="index.html#page-systems" class="nav-link">SYSTEMS</a>
+            </li>
+            <li>
+              <a href="index.html#page-spaces" class="nav-link">SPACES</a>
+            </li>
+            <li><a href="index.html#page-tech" class="nav-link">TECH</a></li>
+            <li>
+              <a href="index.html#page-compare" class="nav-link">COMPARE</a>
+            </li>
+            <li>
+              <a href="index.html#page-config" class="nav-link">CONFIG</a>
+            </li>
+            <li><a href="index.html#page-vip" class="nav-link">VIP</a></li>
+            <li><a href="index.html#page-faq" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <a
+            href="index.html#page-systems"
+            class="quote-trigger-btn"
+            style="text-decoration: none"
+          >
+            <span>CATALOG</span>
+            <span class="quote-count-badge">20</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section
+      id="contact-view"
+      aria-label="Client Portal Login and Project Account Registration"
+    >
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 28px">
+          <div>
+            <span class="section-eyebrow"
+              >10 · ARCHITECTURAL SPECIFICATION PORTAL</span
+            >
+            <h1 class="section-title">
+              Client Portal &amp; Studio Account Access
+            </h1>
+          </div>
+          <a href="index.html" class="btn-secondary">← RETURN TO SHOWCASE</a>
+        </div>
+
+        <div class="contact-portal-grid">
+          <div class="portal-card">
+            <div class="tag-row">
+              <span class="tag-cobalt">EXISTING PARTNER ACCESS</span
+              ><span>·</span><span class="mono-spec">BIM / CAD / ORDERS</span>
+            </div>
+            <h2
+              class="card-title"
+              style="font-size: 1.45rem; margin-bottom: 6px"
+            >
+              CLIENT PORTAL LOGIN
+            </h2>
+            <p class="card-desc" style="margin-bottom: 22px">
+              Access live custom glass fabrication schedules, Leica 3D laser
+              scan reports, and thermal shop drawings.
+            </p>
+            <form onsubmit="return axisLogin(event);">
+              <div class="form-group">
+                <label class="form-label" for="login-email">Work Email</label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="login-email"
+                  required
+                  placeholder="architect@studio-verre.ch"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="login-password">Password</label>
+                <input
+                  class="form-input"
+                  type="password"
+                  id="login-password"
+                  required
+                  placeholder="••••••••••••"
+                />
+              </div>
+              <button type="submit" class="btn-primary" style="width: 100%">
+                SIGN IN TO ARCHITECT PORTAL ↗
+              </button>
+              <div id="login-status" class="portal-status-badge">
+                ✓ AUTHENTICATED — CLIENT PORTAL SESSION INITIALIZED
+              </div>
+            </form>
+          </div>
+
+          <div class="portal-card">
+            <div class="tag-row">
+              <span class="tag-bronze">NEW STUDIO ONBOARDING</span><span>·</span
+              ><span class="tag-volt">DIRECT FACTORY ACCOUNT</span>
+            </div>
+            <h2
+              class="card-title"
+              style="font-size: 1.45rem; margin-bottom: 6px"
+            >
+              REQUEST PROJECT ACCOUNT
+            </h2>
+            <p class="card-desc" style="margin-bottom: 22px">
+              Register your architectural practice or private villa project for
+              direct engineering support and trade pricing.
+            </p>
+            <form onsubmit="return axisRegister(event);">
+              <div class="form-group">
+                <label class="form-label" for="reg-name"
+                  >Full Name / Studio</label
+                >
+                <input
+                  class="form-input"
+                  type="text"
+                  id="reg-name"
+                  required
+                  placeholder="Foster + Partners / Lead Envelope Studio"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-email">Email</label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="reg-email"
+                  required
+                  placeholder="ALiyev@gmail.com"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-phone">Phone</label>
+                <input
+                  class="form-input"
+                  type="tel"
+                  id="reg-phone"
+                  required
+                  placeholder="+998 95 481 57 74"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-password"
+                  >Preferred Password</label
+                >
+                <input
+                  class="form-input"
+                  type="password"
+                  id="reg-password"
+                  required
+                  placeholder="Create secure studio password"
+                />
+              </div>
+              <button type="submit" class="btn-bronze" style="width: 100%">
+                SIGN UP &amp; REQUEST PROJECT ACCOUNT ↗
+              </button>
+              <div id="reg-status" class="portal-status-badge">
+                ✓ REGISTRATION CONFIRMED — STUDIO ACCOUNT PROVISIONED
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
